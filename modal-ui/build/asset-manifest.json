@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9cc95f12.css",
+    "main.js": "/main.js",
+    "787.chunk.js": "/787.chunk.js",
+    "static/media/inter-latin-ext-variable-wghtOnly-normal.woff2": "/static/media/inter-latin-ext-variable-wghtOnly-normal.fad2a547f18821b21f1f.woff2",
+    "static/media/inter-latin-variable-wghtOnly-normal.woff2": "/static/media/inter-latin-variable-wghtOnly-normal.5eb4a7768219776c5b91.woff2",
+    "static/media/inter-cyrillic-ext-variable-wghtOnly-normal.woff2": "/static/media/inter-cyrillic-ext-variable-wghtOnly-normal.47734aec6134293ca791.woff2",
+    "static/media/inter-greek-variable-wghtOnly-normal.woff2": "/static/media/inter-greek-variable-wghtOnly-normal.3a3cf1a02598263f2457.woff2",
+    "static/media/inter-cyrillic-variable-wghtOnly-normal.woff2": "/static/media/inter-cyrillic-variable-wghtOnly-normal.fbe36d91b8952a12c592.woff2",
+    "static/media/inter-greek-ext-variable-wghtOnly-normal.woff2": "/static/media/inter-greek-ext-variable-wghtOnly-normal.23292101a34e08657a5d.woff2",
+    "static/media/inter-vietnamese-variable-wghtOnly-normal.woff2": "/static/media/inter-vietnamese-variable-wghtOnly-normal.74fe938ab12d800f4385.woff2",
+    "index.html": "/index.html",
+    "main.css.map": "/main.css.map",
+    "main.js.map": "/main.js.map",
+    "main.9cc95f12.css.map": "/static/css/main.9cc95f12.css.map",
+    "787.chunk.js.map": "/787.chunk.js.map"
+  },
+  "entrypoints": [
+    "main.css",
+    "main.js",
+    "static/css/main.9cc95f12.css"
+  ]
+}

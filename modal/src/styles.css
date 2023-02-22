@@ -1,0 +1,213 @@
+.addressesContainer {
+  /* padding: 25px 25px 25px 16px; */
+  border: 0;
+  /* border: 1px solid #333; */
+  color: #444;
+  /* font-size: 18px; */
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: 100%;
+  height: 50px;
+  flex-direction: column;
+  transition: 0.3s all;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.4237px;
+  /* identical to box height */
+
+  /* #333333 - Dark Grey */
+
+  color: #333333;
+  /* border: 1px solid magenta; */
+
+  margin-left: 13px;
+}
+
+.address1 {
+  margin-top: 8px;
+  /* border: 1px solid red; */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14.4237px;
+  /* identical to box height */
+
+  /* #333333 - Dark Grey */
+
+  color: #333333;
+}
+.address2 {
+  margin-top: 3px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10.0169px;
+  /* identical to box height */
+
+  /* #959595 - Mid Grey 2 */
+
+  color: #959595;
+}
+
+.inputContainer {
+  /* border: 1px solid magenta; */
+  display: flex;
+}
+
+.input {
+  padding: 25px 25px 25px 16px;
+  border: 0;
+  /* border: 1px solid #333; */
+  color: #444;
+  font-size: 18px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  width: 100%;
+  height: 18px;
+  flex-direction: column;
+  transition: 0.3s all;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.4237px;
+  /* identical to box height */
+
+  /* #333333 - Dark Grey */
+
+  color: #333333;
+}
+
+.input:hover {
+  border: 0;
+  margin: 0;
+  outline: none;
+}
+.input:disabled {
+  background-color: #fefefe;
+}
+.input:focus {
+  outline: none;
+  border: 0;
+  /* background-color: #f7f7f7; */
+  color: #333;
+}
+.input:active {
+  outline: none;
+  border: 0;
+  /* background-color: #f7f7f7; */
+  color: #333;
+}
+
+.input:active:focus {
+  outline: none;
+  border: 0;
+  /* background-color: #f0f2f5; */
+  color: #333;
+}
+
+.input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #959595;
+  opacity: 1; /* Firefox */
+}
+
+.inputArrow {
+  /* align-self: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: blue; */
+  /* background-color: blue; */
+  position: relative;
+  margin-right: 5%;
+  width: 16px;
+  height: 16px;
+  top: 35%;
+  left: 0;
+}
+
+.inputContainer {
+  width: 105% !important;
+  background-color: #fefefe;
+  /* display: flex;
+  align-items: center; */
+}
+
+.inputContainer.error{
+  border: 1.3px solid red;
+  border-width: 0px;
+  border-bottom-width: 1px;
+}
+
+.disabled {
+  display: none;
+}
+
+.card {
+  position: absolute;
+  /* top */
+  margin-left: 10px;
+  margin-top: 0.8rem;
+}
+
+/* shipping auto select */
+
+.shipping {
+  height: 50px;
+  background-color: #fefefe;
+  display: flex;
+}
+.containerShip {
+  align-self: center;
+  display: flex;
+  width: 85%;
+  margin-left: 20px;
+  flex-direction: column;
+  /* border: 1px solid; */
+}
+
+.check {
+  display: flex;
+  justify-content: right;
+  margin-left: 2px;
+  align-self: center;
+  width: 6%;
+}
+
+.shippingHeader {
+  margin-top: 1px;
+  height: 16px;
+  left: 24px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  /* line-height: 16px; */
+
+  /* #333333 - Dark Grey */
+
+  color: #333333;
+}
+.shippingTime {
+  margin-top: 3.2px;
+  height: 12px;
+  left: 24px;
+  top: 539.11px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  /* identical to box height */
+
+  /* #525252 - Dark Grey 2 */
+
+  color: #525252;
+}
+
+.selected {
+  background: rgba(217, 217, 217, 0.5);
+}
