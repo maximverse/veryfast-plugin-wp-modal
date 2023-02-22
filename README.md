@@ -1,0 +1,1 @@
+# veryfast-plugin-wp-modal
