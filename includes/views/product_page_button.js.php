@@ -1,11 +1,11 @@
-const veryFast_Product = <?=$product;?>;
-const merchantApiKey = '<?=$apiKey;?>';
-const vf_shipping_methods = <?=$shipping_methods?>;
-const vf_currencySymbol = '<?=get_woocommerce_currency_symbol(get_woocommerce_currency());?>';
-const vf_currency = '<?=get_woocommerce_currency();?>';
-const vf_callback_url = "<?=$vf_callback_url?>";
+const veryFast_Product = <?= $product; ?>;
+const merchantApiKey = '<?= $apiKey; ?>';
+const vf_shipping_methods = <?= $shipping_methods ?>;
+const vf_currencySymbol = '<?= get_woocommerce_currency_symbol(get_woocommerce_currency()); ?>';
+const vf_currency = '<?= get_woocommerce_currency(); ?>';
+const vf_callback_url = "<?= $vf_callback_url ?>";
 
-var wc_product_is_purchasable = <?=$wc_product_is_purchasable;?>;
+var wc_product_is_purchasable = <?= $wc_product_is_purchasable; ?>;
 
 
 /***
@@ -34,7 +34,7 @@ const getCartContents = async ($) => {
 const data = {
 action:'wc_veryfast_get_cart'
 }
-
+console.log("wc_veryfast_checkout_config",wc_veryfast_checkout_config);
 const res = await $.ajax({
 type: 'post',
 url: wc_veryfast_checkout_config.ajax_url,
@@ -58,6 +58,7 @@ e.preventDefault();
 $("#confirmCheckoutModal").modal('hide')
 
 const addToCartRes = await addToCart($);
+console.log("addToCartRes",addToCartRes);
 
 if (!addToCartRes.cart_hash) {
 Toastify({
@@ -71,6 +72,7 @@ color: "red",
 }
 
 const cartObj = await getCartContents($);
+console.log("cartObj",cartObj);
 
 if (cartObj.success) {
 Toastify({
@@ -94,12 +96,14 @@ setupVeryFast(cartObj);
 
 const setupVeryFast = (_cartObj) => {
 const veryFast = new VeryfastMain();
-veryFast.showCheckoutForm({
+const configData = {
 cart:_cartObj,
 merchantApiKey,
 currencySymbol: vf_currencySymbol,
 currency: vf_currency,
 shipping_methods: vf_shipping_methods,
 callback_url: vf_callback_url
-})
+};
+console.log("configData",configData);
+veryFast.showCheckoutForm(configData)
 }

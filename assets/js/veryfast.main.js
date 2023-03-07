@@ -22,7 +22,19 @@ class VeryfastMain {
   };
 
   showCheckoutForm = (payload) => {
-    window.openVeryFastModal(payload);
+    // window.openVeryFastModal(payload);
+    document.body.style.overflow="hidden";
+    document.getElementById("ic-frame-main-container").style.display = "flex";
+    const hhjhj = document.getElementById("ic-frame-wrapper");
+    console.log("hhjhj", hhjhj);
+    var iFrameToInsert = document.createElement("iframe");
+    iFrameToInsert.id = "ic-frame";
+    iFrameToInsert.frameborder = "0";
+    iFrameToInsert.src = "http://localhost:3000/";
+    iFrameToInsert.class = "ic-frame";
+    iFrameToInsert.title = "Checkout Secured by Instant";
+    iFrameToInsert.style = "display: block; height: 660px";
+    hhjhj.appendChild(iFrameToInsert);
   };
 }
 

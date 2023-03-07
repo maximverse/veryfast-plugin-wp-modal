@@ -34,7 +34,6 @@ class VeryFast_HTML_Handler
         add_action('woocommerce_proceed_to_checkout', array($this, 'button_on_cart_page'), $priority);
         add_action('woocommerce_widget_shopping_cart_buttons', array($this, 'button_on_minicart'), $priority);
         add_action('wp_body_open', array($this, 'veryfast_append_modal_selector'), 1);
-
     }
 
     /**
@@ -103,6 +102,18 @@ class VeryFast_HTML_Handler
         </div>
         </div>
         MOD;
+        $iframe_html = <<<MOD
+        <div id="ic-frame-main-container" class="ic-frame-main-container" style="display: none">
+            <div id="ic-frame-loader-wrapper" class="ic-frame-loader-wrapper" style="display: flex">
+                <div class="ic-loader"></div>
+                <h4 class="ic-loading-text">Loading checkout</h4>
+            </div>
+            <div id="ic-frame-wrapper" class="ic-frame-wrapper" style="display: flex">
+              
+            </div>
+        </div>
+        MOD;
+        echo $iframe_html;
         echo $modal_html;
         echo '<script>';
         echo $this->render('product_page_button.js.php', $params);
@@ -153,7 +164,6 @@ class VeryFast_HTML_Handler
      */
     public function button_on_minicart()
     {
-
     }
 
     public function veryfast_append_modal_selector()
@@ -194,7 +204,8 @@ class VeryFast_HTML_Handler
         $template_path = apply_filters(
             'veryfast_template_path',
             plugin_dir_path(dirname(__FILE__)) . "/includes/views/" . $template_name,
-            $template_name);
+            $template_name
+        );
         ob_start();
 
         include $template_path;

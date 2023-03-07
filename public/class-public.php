@@ -49,10 +49,13 @@ class VeryFast_Public
         wp_register_style('Toastify_style', 'https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css');
         wp_enqueue_style('Toastify_style');
 
-        wp_enqueue_style('VeryFast_Public_css',
-            plugin_dir_url(VERYFAST_PLUGIN_FILE) . 'assets/css/public.css');
+        wp_enqueue_style(
+            'VeryFast_Public_css',
+            plugin_dir_url(VERYFAST_PLUGIN_FILE) . 'assets/css/public.css'
+        );
 
-        //modal
+        // modal
+
         // wp_enqueue_style('modal-style', plugin_dir_url(VERYFAST_PLUGIN_FILE) . 'modal-ui/build/main.css');
         // wp_enqueue_script('modal-script', plugin_dir_url(VERYFAST_PLUGIN_FILE) . 'modal-ui/build/main.js', array('wp-element'), '1.0.0', true);
 
@@ -118,10 +121,12 @@ class VeryFast_Public
     }
 
     public function add_to_cart()
-    {}
+    {
+    }
 
     public function page_visit()
-    {}
+    {
+    }
 
     private function api_url($path)
     {
